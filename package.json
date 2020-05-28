@@ -1,0 +1,22 @@
+{
+  "name": "cypress-poc",
+  "version": "1.0.0",
+  "description": "Playing around with Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bojan-terzic/cypress-poc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bojan-terzic/cypress-poc/issues"
+  },
+  "homepage": "https://github.com/bojan-terzic/cypress-poc#readme",
+  "devDependencies": {
+    "cypress": "^4.7.0"
+  }
+}
