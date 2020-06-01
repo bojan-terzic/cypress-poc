@@ -1,1 +1,12 @@
-{}
+{
+"baseUrl": "http://cypresspoc.local/",
+"watchForFileChanges": true,
+"defaultCommandTimeout": 5000,
+"requestTimeout": 6000,
+"integrationFolder": "cypress/tests",
+"fixturesFolder": "cypress/fixtures",
+"chromeWebSecurity": true,
+"env": 	{
+	"loginurl": "wp-login.php"
+		}
+}
