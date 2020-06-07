@@ -23,3 +23,27 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('loginAsAuthor', () => {
+    cy.getCookies().then(cookies => {
+        let hasMatch = false;
+        cookies.forEach((cookie) => {
+            if (cookie.name.substr(0, 20) === 'wordpress_logged_in_') {
+                hasMatch = true;
+            }
+        });
+
+        if (!hasMatch) {
+            cy.visit('/wp-login.php').wait(1000);
+
+            cy.fixture('users/author.json').then(authorData => {
+                cy.get('#user_login').type(authorData.authorUser)
+                cy.get('#user_pass').type(authorData.authorPassword)
+
+                cy.get('#wp-submit').click()
+
+                cy.visit('/')
+            })
+        }
+    })
+});

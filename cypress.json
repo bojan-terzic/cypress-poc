@@ -1,5 +1,7 @@
 {
 "baseUrl": "http://cypresspoc.local/",
+"viewportHeight": 860,
+"viewportWidth": 1100,
 "watchForFileChanges": true,
 "defaultCommandTimeout": 5000,
 "requestTimeout": 6000,

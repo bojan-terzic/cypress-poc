@@ -13,7 +13,7 @@ describe('Login Tests', () => {
     it('Verify admin can login', () => {
         cy.visit(Cypress.env('loginurl'))
 
-        cy.wait(100)
+        cy.wait(200)
 
         cy.fixture('users/admin.json').then(adminData => {
             cy.get('#user_login').type(adminData.adminUser)
@@ -32,7 +32,7 @@ describe('Login Tests', () => {
     it('Verify author can login', () => {
         cy.visit(Cypress.env('loginurl'))
 
-        cy.wait(100)
+        cy.wait(200)
 
         cy.fixture('users/author.json').then(authorData => {
             cy.get('#user_login').type(authorData.authorUser)
@@ -63,7 +63,7 @@ describe('Login Tests', () => {
     it('Verify password is required', () => {
         cy.visit(Cypress.env('loginurl'))
 
-        cy.wait(100)
+        cy.wait(200)
 
         cy.get('#user_login').type('randomdata')
 
