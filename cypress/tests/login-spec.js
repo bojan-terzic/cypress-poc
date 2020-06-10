@@ -24,9 +24,9 @@ describe('Login Tests', () => {
 
         cy.location().should((loc) => {
             expect(loc.href).to.include('/wp-admin')
-          })    
+        })
 
-          cy.get('#menu-users').should('exist')
+        cy.get('#menu-users').should('exist')
     })
 
     it('Verify author can login', () => {
@@ -43,8 +43,8 @@ describe('Login Tests', () => {
 
         cy.location().should((loc) => {
             expect(loc.href).to.include('/wp-admin')
-        })    
-        
+        })
+
         cy.contains('Howdy, Cypress Author').should('exist')
     })
 
@@ -57,7 +57,7 @@ describe('Login Tests', () => {
 
         cy.get('#wp-submit').click()
 
-        cy.get('#login_error').should('contain.text','The username field is empty')
+        cy.get('#login_error').should('contain.text', 'The username field is empty')
     })
 
     it('Verify password is required', () => {
@@ -69,6 +69,6 @@ describe('Login Tests', () => {
 
         cy.get('#wp-submit').click()
 
-        cy.get('#login_error').should('contain.text','The password field is empty')
+        cy.get('#login_error').should('contain.text', 'The password field is empty')
     })
 });
